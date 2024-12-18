@@ -1,3 +1,5 @@
+import json
+
 questions = [
     {
         "question": "What is the capital of France?",
@@ -25,6 +27,14 @@ questions = [
         "answer": "C"
     }
 ]
+
+# Specify the file name
+file_name = 'questions.json'
+
+# Write the list of questions to a JSON file
+with open(file_name, 'w') as file:
+    json.dump(questions, file, indent=4)
+
 def run_quiz(questions):
     score = 0
 
